@@ -19,8 +19,8 @@ using namespace std;
 //SORTIE : Une instance de la classe CPoint
 CPoint::CPoint(float fltX, float fltY)
 {
-	this->m_fltX = fltX;
-	this->m_fltY = fltY;
+	this->m_fltRho = sqrt(pow(fltX, 2) + pow(fltY, 2));
+	this->m_fltTheta = atan(fltY / fltX);
 }
 
 
@@ -29,8 +29,17 @@ CPoint::CPoint(float fltX, float fltY)
 //SORTIE : Les attributs membres de l'instance modifiés
 void CPoint::deplacer(float fltX, float fltY)
 {
-	this->m_fltX += fltX;
-	this->m_fltY += fltY;
+	//Déclaration des variables
+	float fltTempX = 0.0;
+	float fltTempY = 0.0;
+
+	//Calculs
+	fltTempX = (this->m_fltRho * cos(m_fltTheta)) + fltX;
+	fltTempY = (this->m_fltRho * sin(m_fltTheta)) + fltY;
+
+	//Affichage
+	cout << "X deplace : " << fltTempX << endl;
+	cout << "Y deplace : " << fltTempY << endl;
 }
 
 
@@ -39,7 +48,7 @@ void CPoint::deplacer(float fltX, float fltY)
 //SORTIE : L'attribut abscisse du point
 float CPoint::getAbscisse() const
 {
-	return this->m_fltX;
+	return (this->m_fltRho * cos(m_fltTheta));
 }
 
 
@@ -48,7 +57,7 @@ float CPoint::getAbscisse() const
 //SORTIE : L'attribut ordonnée du point
 float CPoint::getOrdonnee() const
 {
-	return this->m_fltY;
+	return (this->m_fltRho * sin(m_fltTheta));
 }
 
 
@@ -97,7 +106,7 @@ void CPoint::rotation(float fltAngle) const
 //NOTE : Utilisation de pythagore
 void CPoint::rho() const
 {
-	cout << "Rho (coordonnees polaires) : " << sqrt(pow(this->getAbscisse(), 2) + pow(this->getOrdonnee(), 2)) << endl;
+	cout << "Rho (coordonnees polaires) : " << this->m_fltRho << endl;
 }
 
 
@@ -107,7 +116,7 @@ void CPoint::rho() const
 //NOTE : Utilisation de la tangente
 void CPoint::theta() const
 {
-	cout << "Theta (coordonnees polaires) : " << atan(this->getOrdonnee() / this->getAbscisse()) << " radians." << endl;
+	cout << "Theta (coordonnees polaires) : " << this->m_fltTheta << " radians." << endl;
 }
 
 

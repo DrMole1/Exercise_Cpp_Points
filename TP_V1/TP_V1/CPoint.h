@@ -16,8 +16,8 @@ class CPoint
 //Déclaration des attributs membres en privé
 private:
 
-	float m_fltX;
-	float m_fltY;
+	float m_fltRho;
+	float m_fltTheta;
 
 //Déclaration des méthodes membres en publique (signatures)
 public:
