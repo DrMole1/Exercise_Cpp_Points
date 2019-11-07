@@ -23,8 +23,19 @@ int main()
 	ptMonPoint.deplacer(1.5, 1.0);
 
 	//Affichage
-	cout << "X : " << ptMonPoint.getAbscisse() << endl;
-	cout << "Y : " << ptMonPoint.getOrdonnee() << endl;
+	cout << "X final : " << ptMonPoint.getAbscisse() << endl;
+	cout << "Y final : " << ptMonPoint.getOrdonnee() << endl;
+
+	//Homothétie
+	ptMonPoint.homothetie(3);
+
+	//Rotation
+	ptMonPoint.rotation(90);
+
+	//Rho et théta
+	ptMonPoint.rho();
+	ptMonPoint.theta();
+
 
 	system("pause");
 	return 0;

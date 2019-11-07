@@ -26,4 +26,8 @@ public:
 	void deplacer(float fltX, float fltY);
 	float getAbscisse() const;
 	float getOrdonnee() const;
+	void homothetie(float fltRapport) const;
+	void rotation(float fltAngle) const;
+	void rho() const;
+	void theta() const;
 };
