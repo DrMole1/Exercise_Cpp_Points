@@ -24,5 +24,6 @@ public:
 
 	CPoint(float fltX, float fltY);
 	void deplacer(float fltX, float fltY);
-	void afficher() const;
+	float getAbscisse() const;
+	float getOrdonnee() const;
 };

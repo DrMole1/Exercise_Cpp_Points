@@ -15,14 +15,16 @@ int main()
 	//Création de l'instance
 	CPoint ptMonPoint(4.5, 2.0);
 
-	//Affichage
-	ptMonPoint.afficher();
+	//Affichage 
+	cout << "X : " << ptMonPoint.getAbscisse() << endl;
+	cout << "Y : " << ptMonPoint.getOrdonnee() << endl;
 
 	//Translater
 	ptMonPoint.deplacer(1.5, 1.0);
 
 	//Affichage
-	ptMonPoint.afficher();
+	cout << "X : " << ptMonPoint.getAbscisse() << endl;
+	cout << "Y : " << ptMonPoint.getOrdonnee() << endl;
 
 	system("pause");
 	return 0;

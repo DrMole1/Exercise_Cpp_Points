@@ -8,9 +8,7 @@
 
 //Implémentation de la bibliothèque
 #include "CPoint.h"
-#include <iostream>
 
-using namespace std;
 
 
 //BUT : Constructeur de la classe CPoint
@@ -33,14 +31,25 @@ void CPoint::deplacer(float fltX, float fltY)
 }
 
 
-//BUT : Afficher les attributs membres de la classe CPoint
+//BUT : Getter de l'abscisse du point
 //ENTREE : /
-//SORTIE : Affichage des attributs membres 
-void CPoint::afficher() const
+//SORTIE : L'attribut abscisse du point
+float CPoint::getAbscisse() const
 {
-	cout << "X : " << this->m_fltX << endl;
-	cout << "Y : " << this->m_fltY << endl;
+	return this->m_fltX;
 }
+
+
+//BUT : Getter de l'ordonnée du point
+//ENTREE : /
+//SORTIE : L'attribut ordonnée du point
+float CPoint::getOrdonnee() const
+{
+	return this->m_fltY;
+}
+
+
+
 
 
 
