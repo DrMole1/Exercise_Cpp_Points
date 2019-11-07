@@ -13,21 +13,18 @@
 
 class CPoint
 {
-//Déclaration des attributs membres en privé
+	//Déclaration des attributs membres en privé
 private:
 
-	float m_fltRho;
-	float m_fltTheta;
+	int m_nNombre;
+	float m_fltX;
+	float m_fltY;
 
-//Déclaration des méthodes membres en publique (signatures)
+	//Déclaration des méthodes membres en publique (signatures)
 public:
 
 	CPoint(float fltX, float fltY);
 	void deplacer(float fltX, float fltY);
-	float getAbscisse() const;
-	float getOrdonnee() const;
-	void homothetie(float fltRapport) const;
-	void rotation(float fltAngle) const;
-	void rho() const;
-	void theta() const;
+	void afficher() const;
+	void getNombre();
 };

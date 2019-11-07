@@ -12,30 +12,53 @@ using namespace std;
 //SORTIE : Affichage de ses attributs
 int main()
 {
-	//Création de l'instance
-	CPoint ptMonPoint(4.5, 2.0);
 
-	//Affichage 
-	cout << "X : " << ptMonPoint.getAbscisse() << endl;
-	cout << "Y : " << ptMonPoint.getOrdonnee() << endl;
+	for (int i = 0; i < 2; i++)
+	{
+		if (i == 0)
+		{
+			CPoint ptMonPoint1(4.5, 2.0);
+			//Affichage
+			ptMonPoint1.afficher();
 
-	//Translater
-	ptMonPoint.deplacer(1.5, 1.0);
+			//Translater
+			ptMonPoint1.deplacer(1.5, 1.0);
 
-	//Affichage
-	cout << "X final : " << ptMonPoint.getAbscisse() << endl;
-	cout << "Y final : " << ptMonPoint.getOrdonnee() << endl;
+			//Affichage
+			ptMonPoint1.afficher();
 
-	//Homothétie
-	ptMonPoint.homothetie(3);
+			ptMonPoint1.getNombre();
+		}
+		else if (i == 1)
+		{
+			CPoint ptMonPoint2(4.5, 2.0);
+			//Affichage
+			ptMonPoint2.afficher();
 
-	//Rotation
-	ptMonPoint.rotation(90);
+			//Translater
+			ptMonPoint2.deplacer(1.5, 1.0);
 
-	//Rho et théta
-	ptMonPoint.rho();
-	ptMonPoint.theta();
+			//Affichage
+			ptMonPoint2.afficher();
 
+			ptMonPoint2.getNombre();
+		}
+		else
+		{
+			CPoint ptMonPoint3(4.5, 2.0);
+			//Affichage
+			ptMonPoint3.afficher();
+
+			//Translater
+			ptMonPoint3.deplacer(1.5, 1.0);
+
+			//Affichage
+			ptMonPoint3.afficher();
+
+			ptMonPoint3.getNombre();
+		}
+
+	}
 
 	system("pause");
 	return 0;
